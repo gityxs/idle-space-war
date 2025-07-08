@@ -28,13 +28,13 @@ window.particleRenderer = {
             
             // HPが0以下になった場合のみ爆発エフェクトを再生
             if (prev.hpRatio > 0 && cur && cur.hpRatio <= 0) {
-                console.log(`Enemy ${id} defeated: HP ${prev.hpRatio} -> ${cur.hpRatio}, creating explosion at (${cur.x}, ${cur.y})`);
+                // console.log(`Enemy ${id} defeated: HP ${prev.hpRatio} -> ${cur.hpRatio}, creating explosion at (${cur.x}, ${cur.y})`);
                 this.addSimpleParticleExplosion(cur.x, cur.y, cur.color);
                 this.explodedEnemyIds.add(id);
             }
             // 敵が完全に消失した場合（前フレームで生きていたが現フレームに存在しない）
             else if (prev.hpRatio > 0 && !cur) {
-                console.log(`Enemy ${id} disappeared: was alive with HP ${prev.hpRatio}, creating explosion at (${prev.x}, ${prev.y})`);
+                // console.log(`Enemy ${id} disappeared: was alive with HP ${prev.hpRatio}, creating explosion at (${prev.x}, ${prev.y})`);
                 this.addSimpleParticleExplosion(prev.x, prev.y, prev.color);
                 this.explodedEnemyIds.add(id);
             }
@@ -47,7 +47,7 @@ window.particleRenderer = {
         if (current.size === 0) {
             this._emptyFrames = (this._emptyFrames || 0) + 1;
             if (this._emptyFrames > 60) {                // 60フレーム（約1秒）無敵ならリセット
-                console.log(`Clearing explodedEnemyIds after ${this._emptyFrames} empty frames`);
+                // console.log(`Clearing explodedEnemyIds after ${this._emptyFrames} empty frames`);
                 this.explodedEnemyIds.clear();
                 this._emptyFrames = 0;
             }
@@ -58,11 +58,11 @@ window.particleRenderer = {
 
     // Reset explosion tracking for tier/planet changes
     resetExplosionTracking: function() {
-        console.log(`Resetting explosion tracking. Previous exploded count: ${this.explodedEnemyIds.size}`);
+        // console.log(`Resetting explosion tracking. Previous exploded count: ${this.explodedEnemyIds.size}`);
         this.explodedEnemyIds.clear();
         this.previousEnemies.clear();
         this._emptyFrames = 0;
-        console.log('Explosion tracking reset complete');
+        // console.log('Explosion tracking reset complete');
     },
 
     // Simple 2D particle explosion - reliable and straightforward
@@ -101,7 +101,7 @@ window.particleRenderer = {
 
     // Update particle positions and remove expired ones
     updateParticles: function (deltaTime) {
-        console.log(`Updating ${this.particles.length} particles, deltaTime: ${deltaTime}`);
+        // console.log(`Updating ${this.particles.length} particles, deltaTime: ${deltaTime}`);
 
         // Enhanced cleanup: limit total particles to prevent performance issues
         if (this.particles.length > 100) {
