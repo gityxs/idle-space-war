@@ -1,0 +1,13 @@
+:root {
+    --progress: 0%;
+    --hp-ratio: 0%;
+
+    /* From ColorPalette.Battle */
+    --color-base: #000000;
+    --color-main: #1a1a2a;
+    --color-accent: #4a90e2;
+    --color-text: #ffffff;
+    --color-success: limegreen;
+    --color-warning: #ffcc00;
+    --color-error: #e94e77;
+}

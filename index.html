@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <title>CubeUpgradeBlazorApp</title>
+    <base href="/"/>
+    <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet"/>
+    <link href="css/app.css" rel="stylesheet"/>
+    <link href="css/theme.css" rel="stylesheet" />
+    <link rel="icon" type="image/png" href="favicon.png"/>
+    <link href="CubeUpgradeBlazorApp.styles.css" rel="stylesheet"/>
+    <script src="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/Chart.js/2.9.4/Chart.min.js"></script>
+    <script src="_content/ChartJs.Blazor/ChartJsBlazorInterop.js"></script>
+    <!-- Modular canvas rendering system -->
+    <script src="js/colorUtils.js"></script>
+    <script src="js/spaceRenderer.js"></script>
+    <script src="js/planetRenderer.js"></script>
+    <script src="js/shipRenderer.js"></script>
+    <script src="js/enemyRenderer.js"></script>
+    <script src="js/projectileRenderer.js"></script>
+    <script src="js/particleRenderer.js"></script>
+    <script src="js/canvasCore.js"></script>
+    <script src="js/runtime.js"></script>
+    <script src="js/grow-circle.js"></script>
+    <script src="js/window.js"></script>
+    <script type="module" src="js/firebase-auth.js"></script>
+</head>
+
+<body>
+<script src="chs.js"></script>
+<script src="core.js"></script>
+<div id="app">
+    <svg class="loading-progress">
+        <circle r="40%" cx="50%" cy="50%"/>
+        <circle r="40%" cx="50%" cy="50%"/>
+    </svg>
+    <div class="loading-progress-text"></div>
+</div>
+
+<div id="blazor-error-ui">
+    An unhandled error has occurred.
+    <a href="" class="reload">Reload</a>
+    <a class="dismiss">🗙</a>
+</div>
+<script src="_framework/blazor.webassembly.js"></script>
+<!--客服 开始-->
+<script src="//g8hh.github.io/static/js/jquery.min.js"></script>
+<link rel="stylesheet" href="//g8hh.github.io/static/css/kf.css" type="text/css" media="screen" charset="utf-8">
+<script src="//g8hh.github.io/static/js/kf.js"></script>
+<!-- 客服 结束 -->
+<!--站长统计-->
+    <div style="display: none">
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?828597e93cee632465679b7ef35edfd5";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>    </div>
+</body>
+
+</html>
